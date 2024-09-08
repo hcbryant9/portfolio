@@ -1,0 +1,31 @@
+---
+import { Image } from 'astro:assets';
+import lauren from '../assets/laurengrass.JPG';
+import dylon from '../assets/dylongrass.JPG'
+---
+
+<div class="image-container">
+    <Image
+      class="project-image border border-black"
+      src={lauren}
+      alt="photo from day of exhibition"
+      densities={[1, 2, 3]} 
+    />
+    <Image
+      class="project-image border border-black"
+      src={dylon}
+      alt="another photo"
+      densities={[1, 2, 3]} 
+    />
+  </div>
+  
+  <style>
+    .image-container {
+      display: flex;
+      width: 100%;
+    }
+    .project-image {
+      width: 50%;
+      height: 275px;
+    }
+  </style>

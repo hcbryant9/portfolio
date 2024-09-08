@@ -1,0 +1,29 @@
+---
+import { Image } from 'astro:assets';
+import contributions from '../assets/contributions.png';
+---
+
+<div class="image-container">
+  <a href="https://github.com/hcbryant9" target="_blank" rel="noopener noreferrer">
+    <Image
+      class="project-image border border-black"
+      src={contributions}
+      alt="screen shot of blog"
+      densities={[1, 2, 3]} 
+    />
+  </a>
+</div>
+
+<style>
+  .image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%; 
+  }
+
+  .project-image {
+    max-width: 100%; 
+    height: auto;   
+  }
+</style>

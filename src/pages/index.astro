@@ -8,9 +8,18 @@ import CTA from "../components/CTA.astro";
 import Contact from "../components/Contact.astro";
 
 //Professional Work Components
+import Sound from "../components/Sound.astro";
+import Guess from "../components/Guess.astro";
+import Photo from "../components/Photo.astro";
 import Anaren from "../components/Anaren.astro";
 //Project Components
-import Python from "../components/Python.astro";
+
+import Lauren from "../components/Lauren.astro";
+import Blog from "../components/Blog.astro"
+import Lucidity from "../components/Lucidity.astro";
+
+//Github Component
+import GithubContributions from '../components/GithubContributions.astro';
 ---
 
 <Layout title="Web Developer Portfolio">
@@ -21,16 +30,14 @@ import Python from "../components/Python.astro";
         <p
           class="mt-4 text-lg text-zinc-500 dark:text-zinc-400 font-light lg:text-xl"
         >
-          I create engaging internet projects and content, drawing from my
-          experience in freelance web development. My work spans across various
-          clients, from individuals and startups to large companies. If you
-          believe I can contribute to your business, please don't hesitate to <a
+          I'm passionate about creative technology that intersects with art, music, and social issues. My work spans across various
+          software and frameworks, from game devoplment to web. Currently, I'm based out of Richmond, Virginia. Check out my projects and work experience! Please don't hesitate to <a
             href="#contact"
             class="underline text-gray-300">reach out</a
           >.
         </p>
       </div>
-      <div class="mb-16">
+      <!-- <div class="mb-16">
         <h2
           class="text-3xl mt-6 font-medium lg:text-4xl tracking-tight text-primary dark:text-white"
         >
@@ -44,88 +51,94 @@ import Python from "../components/Python.astro";
           > videos on web development, including projects I'm currently working on.
         </p>
         <CustomImageScroll />
-      </div>
+      </div> -->
 
       <h2
         class="text-3xl mt-6 font-medium lg:text-4xl tracking-tight text-primary dark:text-white mb-2"
       >
-        Professional Work
+      Current Projects
       </h2>
       <div class="mx-auto grid grid-cols-1 md:grid-cols-3 gap-4">
         <div class="">
           <Card
-            href="anaren"
-            title="Anaren.com"
-            body="A Drupal website for the space and defense company, featuring pages for their different divisions and product lines. It also includes extensive DataTables integration for their product catalog."
-            tags="Drupal, PHP, JavaScript, CSS, HTML"
+            href="guess"
+            title="Guess-Hue"
+            body="A New-York-Times style game with daily clues where the user tries to guess a secret color. In collaboration with The Nameist."
+            tags="Firebase React, CSS, HTML"
           >
             <div class="max-w-full">
-              <Anaren />
+              <Guess />
             </div>
           </Card>
         </div>
         <div class="">
           <Card
-            href="anaren"
-            title="Anaren.com"
-            body="A Drupal website for the space and defense company, featuring pages for their different divisions and product lines. It also includes extensive DataTables integration for their product catalog."
-            tags="Drupal, PHP, JavaScript, CSS, HTML"
+            href="sound"
+            title="Body-Sound-Synthesis"
+            body="A machine-learning pose detection project to detect movement to connect into Pure Data for sound generation. In collaboration with Oscar Muendel. "
+            tags="Python, OpenCV, Pure Data"
           >
             <div class="max-w-full">
-              <Anaren />
+              <Sound />
             </div>
           </Card>
         </div>
         <div class="">
           <Card
-            href="anaren"
-            title="Anaren.com"
-            body="A Drupal website for the space and defense company, featuring pages for their different divisions and product lines. It also includes extensive DataTables integration for their product catalog."
-            tags="Drupal, PHP, JavaScript, CSS, HTML"
+            href="photo"
+            title="Photo-Editor"
+            body="A image processing project for a web-based photo editor to produce novel effects between two images including pixelation, bayer, halftone, and more."
+            tags="Firebase, JavaScript, HTML, CSS "
           >
             <div class="max-w-full">
-              <Anaren />
+              <Photo />
             </div>
           </Card>
         </div>
       </div>
       <div class="my-8 bg-black">
-        <CTA />
+        <Card
+        title="Contributions"
+        body=""
+        tags=""
+      >
+        <GithubContributions />
+        </Card>
       </div>
       <h2
         class="text-3xl mt-6 font-medium lg:text-4xl tracking-tight text-primary dark:text-white mb-2"
       >
-        Fun Projects
+        Misc Projects
       </h2>
       <div class="mx-auto grid grid-cols-1 md:grid-cols-3 gap-4">
         <div class="">
           <Card
-            title="Misc Python Apps"
-            body="Miscellaneous Python applications and scripts I've made to help me learn Python and to use as productivity tools or save me time."
-            tags="Python"
+            title="Virtual Harmony"
+            body="An extended reality exhibit presented 12/08/23. A project about connecting with earth through a digital & physical space."
+            tags="Lauren"
             github="https://github.com/leabs/misc-python-apps"
           >
-            <Python />
+            <Lauren />
           </Card>
         </div>
         <div class="">
           <Card
-            title="Misc Python Apps"
-            body="Miscellaneous Python applications and scripts I've made to help me learn Python and to use as productivity tools or save me time."
-            tags="Python"
+            title="Personal Blog"
+            body="Developed with vanilla JS, HTML, CSS and deployed with Firebase. The website serves as an alternative platform to addictive media platforms. Hank1do.com is largely inspired by individual-blogs and various open-sourced communities."
+            tags="Blog"
             github="https://github.com/leabs/misc-python-apps"
           >
-            <Python />
+            <Blog />
           </Card>
         </div>
         <div class="">
           <Card
-            title="Misc Python Apps"
-            body="Miscellaneous Python applications and scripts I've made to help me learn Python and to use as productivity tools or save me time."
+            title="Lucidity"
+            body="An immersive short film about identity and religion in the context of modern social hierarchies. Developed in collaboration with the school of Kinetic Imaging at VCU & the Korea National University of Arts."
             tags="Python"
             github="https://github.com/leabs/misc-python-apps"
           >
-            <Python />
+            <Lucidity />
           </Card>
         </div>
       </div>
