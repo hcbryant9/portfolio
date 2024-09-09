@@ -1,6 +1,6 @@
 # Portfolio
 
-This is a for of Steven Leabo's 'Shadow Stack' web developer portfolio built with Astro. Currently hosted with Firebase & GitHub Actions, feel free to fork this one or the original.
+This is a fork of Steven Leabo's 'Shadow Stack' web developer portfolio built with Astro. Currently hosted with Firebase & GitHub Actions, feel free to fork this one or the original.
 
 Here is the link to the portfolio to see how it looks: https://henry-bryant.web.app/
 
