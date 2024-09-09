@@ -1,0 +1,43 @@
+---
+const items = [
+  "./project-images/photo-sample.png",
+  "./project-images/photo-sample-2.png"
+];
+---
+
+<div class="sample">
+  {
+    items.map((item) => (
+        <img loading="lazy" class="sample-img" src={item} alt="Anaren sample " />
+    ))
+  }
+</div>
+
+<style>
+  .sample {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    cursor: auto;
+  }
+
+  .sample-img {
+    
+    width: 35%; 
+    height: auto; 
+  }
+
+  @media (max-width: 768px) {
+    .sample {
+      display: flex;
+      width: 55%;
+      justify-content: left;
+      flex-direction: row;
+      gap: 12px;
+    }
+
+    .sample-img {
+      width: 45%; /* Adjust image size for mobile view */
+    }
+  }
+</style>
