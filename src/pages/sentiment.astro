@@ -1,0 +1,42 @@
+---
+import Layout from "../layouts/Layout.astro";
+import BackButton from "../components/BackButton.astro";
+import SoundSample from "../components/PhotoSample.astro";
+---
+
+<Layout title="Sound">
+  <div class="max-w-screen-md m-auto p-4 my-4 antialiased">
+    <h1 class="mb-4 text-3xl font-extrabold leading-tight text-gray-900 lg:mb-6 lg:text-4xl dark:text-white">
+      Photo Editor <br /><span class="text-gradient"
+        ></span>
+    </h1>
+
+    <SoundSample />
+    
+    <p class="lead text-white">
+      Image processing web-app effects inspired by alienmelon's free software Electric Zine Maker. Created for novel effects on a mobile browser.</p>
+        <br>
+        <p class="text-white">The site was built as a part of my blog and slowly grew as I received feedback and photos from friends. The photo editor is 
+          written in JavaScript using standard image-processing principles. The standard effects include Pixelation, Monochrome, Bayer, Halftone, and Bloom.
+          When adding a second image for blend effects the user can select Add, Multiply, Screen, Subtract, Overlay, Lighten, or Darken.
+        </p>
+        <br>
+        <p class="mb-6 text-gray-300 md:text-lg">
+          <a
+            href="https://hank1do.com/upelanding.html"
+            target="_blank"
+            class="underline inline"
+            >Visit Page</a
+          >
+        </p>
+        <p class="text-white">
+          Technologies: JavaScript, HTML, CSS, Image Processing, Firebase, GitHub Actions
+        </p>
+
+    <BackButton />
+</div>
+</Layout>
+
+<style>
+</style>
+

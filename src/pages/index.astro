@@ -12,14 +12,18 @@ import Photo from "../components/Photo.astro";
 //Project Components
 
 import Lauren from "../components/Lauren.astro";
-import Blog from "../components/Blog.astro"
+import Blog from "../components/Blog.astro";
 import Lucidity from "../components/Lucidity.astro";
-
+import Sentiment from "../components/Sentiment.astro";
+import Technology from "../components/Technology.astro";
 //Github Component
 import GithubContributions from '../components/GithubContributions.astro';
 ---
 
+<!-- Introduction Section -->
+ 
 <Layout title="Web Developer Portfolio">
+  <section class="fade-in">
   <div id="contents">
     <main class="container">
       <div class="mb-16">
@@ -34,13 +38,15 @@ import GithubContributions from '../components/GithubContributions.astro';
           >.
         </p>
       </div>
-    
 
+      <!-- Current Project Section -->
+      
       <h2
         class="text-3xl mt-6 font-medium lg:text-4xl tracking-tight text-primary dark:text-white mb-2"
       >
       Current Projects
       </h2>
+      <section class="fade-in">
       <div class="mx-auto grid grid-cols-1 md:grid-cols-3 gap-4">
         <div class="">
           <Card
@@ -79,6 +85,10 @@ import GithubContributions from '../components/GithubContributions.astro';
           </Card>
         </div>
       </div>
+    </section>
+
+    <!-- Contributions Section -->
+     <section class="fade-in">
       <div class="my-8 bg-black">
         <Card
         title="Contributions"
@@ -88,11 +98,49 @@ import GithubContributions from '../components/GithubContributions.astro';
         <GithubContributions />
         </Card>
       </div>
+    </section>
+      
+      <!-- Work Experience -->
+      
+      <h2
+        class="text-3xl mt-6 font-medium lg:text-4xl tracking-tight text-primary dark:text-white mb-2"
+      >
+        Work Experience
+      </h2>
+      <section class="fade-in">
+      <div class="mx-auto grid grid-cols-1 md:grid-cols-3 gap-4">
+        <div class="">
+          <Card
+            href="sentiment"
+            title="Sentiment Voice"
+            body="Machine-Learning driven live virtual reality-based performance art project, to explore how artificial intelligence can surveil emotion data of personal speech in chat, text, and face landmarks. This project demonstrates and promotes public awareness of the vulnerability and insecurity of emotion data."
+            tags="Sentiment"
+            >
+            <Sentiment />
+          </Card>
+        </div>
+        <div class="">
+          <Card
+            title="Technical Assistant"
+            body="Worked as a TA where I taught and created thourough Unity virtual reality tutorials for Virtual Interactive Worlds, a course that bridges the gap between technology and human experience. The tutorials include topics such as project and github setup, animation, physics, optimization, and sound. "
+            tags="TA"
+            github="https://github.com/hcbryant9/VIW-TA-Tutorial"
+          >
+          <Technology />
+          </Card>
+        </div>
+      </div>
+    </section>
+
+      
+      <!-- Misc Projects Section -->
+      
       <h2
         class="text-3xl mt-6 font-medium lg:text-4xl tracking-tight text-primary dark:text-white mb-2"
       >
         Misc Projects
       </h2>
+      <section class="fade-in">
       <div class="mx-auto grid grid-cols-1 md:grid-cols-3 gap-4">
         <div class="">
           <Card
@@ -125,9 +173,14 @@ import GithubContributions from '../components/GithubContributions.astro';
           </Card>
         </div>
       </div>
+    </section>
+
+      <!-- Contact -->
+      <section class="fade-in">
       <div class="my-8">
         <Contact />
       </div>
+    </section>
     </main>
   </div>
 </Layout>
@@ -224,6 +277,32 @@ import GithubContributions from '../components/GithubContributions.astro';
   summary:hover {
     cursor: pointer;
   }
+  .fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  }
+
+  .fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
 </style>
 
-<script></script>
+
+<script>
+  const sections = document.querySelectorAll('.fade-in');
+
+  const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1 });
+
+  sections.forEach(section => {
+    observer.observe(section);
+  });
+</script>
