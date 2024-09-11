@@ -1,43 +1,27 @@
----
-const items = [
-  "./project-images/photo-sample.png",
-  "./project-images/photo-sample-2.png"
-];
----
 
-<div class="sample">
-  {
-    items.map((item) => (
-        <img loading="lazy" class="sample-img" src={item} alt="Anaren sample " />
-    ))
-  }
-</div>
 
-<style>
-  .sample {
-    display: flex;
-    justify-content: center;
-    gap: 12px;
-    cursor: auto;
-  }
-
-  .sample-img {
+<div class="image-container">
+    <img
+      class="project-image border border-black"
+      src={'./photo-sample.png'}
+      alt="photo from day of exhibition"
     
-    width: 35%; 
-    height: auto; 
-  }
-
-  @media (max-width: 768px) {
-    .sample {
+    />
+    <img
+      class="project-image border border-black"
+      src={'./photo-sample-2.png'}
+      alt="another photo"
+      
+    />
+  </div>
+  
+  <style>
+    .image-container {
       display: flex;
-      width: 55%;
-      justify-content: left;
-      flex-direction: row;
-      gap: 12px;
+      width: 100%;
     }
-
-    .sample-img {
-      width: 45%; /* Adjust image size for mobile view */
+    .project-image {
+      width: 50%;
+      height: 275px;
     }
-  }
-</style>
+  </style>
