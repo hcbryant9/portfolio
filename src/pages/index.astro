@@ -16,10 +16,16 @@ import Blog from "../components/Blog.astro";
 import Lucidity from "../components/Lucidity.astro";
 import Sentiment from "../components/Sentiment.astro";
 import Technology from "../components/Technology.astro";
+import Award from "../components/Award.astro";
+import Sequence from "../components/Sequence.astro";
 //Github Component
 import GithubContributions from '../components/GithubContributions.astro';
 ---
-
+<style>
+  .font-bold {
+    font-weight: 600; /* You can adjust this */
+  }
+</style>
 <!-- Introduction Section -->
  
 <Layout title="Web Developer Portfolio">
@@ -28,15 +34,10 @@ import GithubContributions from '../components/GithubContributions.astro';
     <main class="container">
       <div class="mb-16">
         <Heading />
-        <p
-          class="mt-4 text-lg text-zinc-500 dark:text-zinc-400 font-light lg:text-xl"
-        >
-          I'm passionate about creative technology that intersects with art, music, and social issues. My work spans across various
-          software and frameworks, from game devoplment to web. Currently, I'm based out of Richmond, Virginia. Check out my projects and work experience! Please don't hesitate to <a
-            href="#contact"
-            class="underline text-gray-300">reach out</a
-          >.
+        <p class="mt-4 text-lg text-zinc-500 dark:text-zinc-400 font-light lg:text-xl">
+          I'm passionate about creative technology that intersects with art, music, and social issues. I'm a 2024 graduate in Computer Science based out of Richmond, Virginia. I specialize in <b class="font-bold">data communication</b> in game and web development. I write code in <b class="font-bold">JavaScript</b>, <b class="font-bold">React</b>, <b class="font-bold">Python</b>, and <b class="font-bold">C#</b> using tools like <b class="font-bold">Firebase</b>, <b class="font-bold">Unity</b>, <b class="font-bold">Open-CV</b>.
         </p>
+        
       </div>
 
       <!-- Current Project Section -->
@@ -44,7 +45,7 @@ import GithubContributions from '../components/GithubContributions.astro';
       <h2
         class="text-3xl mt-6 font-medium lg:text-4xl tracking-tight text-primary dark:text-white mb-2"
       >
-      Current Projects
+      Projects
       </h2>
       <section class="fade-in">
       <div class="mx-auto grid grid-cols-1 md:grid-cols-3 gap-4">
@@ -87,7 +88,7 @@ import GithubContributions from '../components/GithubContributions.astro';
       </div>
     </section>
 
-    <!-- Contributions Section -->
+    <!-- Contributions Section
      <section class="fade-in">
       <div class="my-8 bg-black">
         <Card
@@ -98,7 +99,7 @@ import GithubContributions from '../components/GithubContributions.astro';
         <GithubContributions />
         </Card>
       </div>
-    </section>
+    </section> -->
       
       <!-- Work Experience -->
       
@@ -132,18 +133,30 @@ import GithubContributions from '../components/GithubContributions.astro';
       </div>
     </section>
 
-    <!-- Awards Section -->
+
+
+    <!-- Awarads  Section -->
+      
+    <h2
+      class="text-3xl mt-6 font-medium lg:text-4xl tracking-tight text-primary dark:text-white mb-2"
+    >
+      Awards
+    </h2>
     <section class="fade-in">
-      <div class="my-8 bg-black">
+    <div class="mx-auto grid grid-cols-1 md:grid-cols-3 gap-4">
+      <div class="">
         <Card
-        title="Awards"
-        body=""
-        tags=""
-      >
-       
+          title="Senior Design Capstone: First Place"
+          body=""
+          tags="awards"
+          
+        >
+          <Award />
         </Card>
       </div>
-    </section>
+    </div>
+  </section>
+    
       <!-- Misc Projects Section -->
       
       <h2
@@ -156,7 +169,7 @@ import GithubContributions from '../components/GithubContributions.astro';
         <div class="">
           <Card
             title="Virtual Harmony"
-            body="An extended reality exhibit presented 12/08/23. A project about connecting with earth through a digital & physical space."
+            body="An extended reality exhibit presented 12/08/23. A project about connecting with earth through a digital & physical space. Timeline 11/2023 - 12/2023."
             tags="Lauren"
             github="https://hank1do.com/harmony.html"
           >
@@ -166,7 +179,7 @@ import GithubContributions from '../components/GithubContributions.astro';
         <div class="">
           <Card
             title="Personal Blog"
-            body="Developed with vanilla JS, HTML, CSS and deployed with Firebase. The website serves as an alternative platform to addictive media platforms. Hank1do.com is largely inspired by individual-blogs and various open-sourced communities."
+            body="Developed with vanilla JS, HTML, CSS and deployed with Firebase. The website serves as an alternative platform to addictive media platforms. Hank1do.com is largely inspired by individual-blogs and various open-sourced communities. Timeline 07/2023 - Current."
             tags="Blog"
             github="https://hank1do.com/index.html"
           >
@@ -176,11 +189,21 @@ import GithubContributions from '../components/GithubContributions.astro';
         <div class="">
           <Card
             title="Lucidity"
-            body="An immersive short film about identity and religion in the context of modern social hierarchies. Developed in collaboration with the school of Kinetic Imaging at VCU & the Korea National University of Arts."
+            body="An immersive short film about identity and religion in the context of modern social hierarchies. Developed in collaboration with the school of Kinetic Imaging at Virignia Commonwealth University & the Korea National University of Arts. Timeline 12/2023 - 03/2024."
             tags="Python"
-            github="https://hank1do.com/lucidity.html"
+            github="https://www.youtube.com/watch?v=kFqkExTJb0E"
           >
             <Lucidity />
+          </Card>
+        </div>
+        <div class="">
+          <Card
+            title="Sequence-Scroller"
+            body="A program created for stepping through and walking around image sequences. Written in Python using Open-CV and TKinter. Timeline December 12/24."
+            tags="Python"
+            github="https://youtu.be/JED5uxbRqM4"
+          >
+            <Sequence />
           </Card>
         </div>
       </div>
