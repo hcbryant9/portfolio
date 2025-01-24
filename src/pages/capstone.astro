@@ -1,0 +1,45 @@
+---
+import Layout from "../layouts/Layout.astro";
+import BackButton from "../components/BackButton.astro";
+import Capstone from "../components/Capstone.astro";
+---
+
+<Layout title="Senior Design Captstone: First Place">
+  <div class="max-w-screen-md m-auto p-4 my-4 antialiased">
+    <h1 class="mb-4 text-3xl font-extrabold leading-tight lg:mb-6 lg:text-4xl dark:text-white">
+      Sentiment Voice: Integrating Emotion AI & VR<br />
+    </h1>
+    <center>
+        <Capstone /><br>
+    </center>
+    
+    
+    <p class="lead text-white">
+      During the Senior Design Expo I presented my project to the public and several judges. After the Expo, my team and I were awarded first place. </p>
+        <br>
+        <p class="text-white">
+            The project encompassed facial detection and natural language proccessing using machine-learning models and artificial intelligence.
+            I used Unity and Virtual Reality to display the users emotions in an adaptive environment: how they were feeling and what they said was projected onto the landscape around them.
+            I immersed the user using reactive weather, audio, and scenery to shed light on emotional data tracking in tech for public awareness. 
+            Throughout the development of the project I automated the process of facial-data collection and labeled expressions to train a machine-learning model using Pytorch Padas, and Joblib.
+            I also implemented a backend REST API using python to communicate with the model, capable of receiving requests from Unity, prediciting emotions, and natural language processing with OpenAI's GPT 4.
+            I also setup monitoring tools such as Prometheus for scraping my API for data and Grafana for data visualization.
+        </p>
+        <br>
+        <p class="text-white">I was later hired as a contrator to continue working on this project.</p>
+
+        <br>
+        
+        <p class ="text-white">
+          Technologies: Python, C#, Unity, VR, REST, Machine Learning, AI<br>
+          Collaborators: Miles Popiela, Ariana Thomas <br>
+          Timeline: 10/23-05/24
+        </p>
+
+    <BackButton />
+</div>
+</Layout>
+
+<style>
+</style>
+

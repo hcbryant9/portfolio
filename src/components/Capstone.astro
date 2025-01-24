@@ -1,0 +1,21 @@
+---
+import { Image } from 'astro:assets';
+import capstone from '../assets/pfp.jpg';
+---
+
+<div>
+  <Image
+    class="project-image border  border-black"
+    src={capstone}
+    alt="screen shot of blog"
+    densities={[1, 2, 3]} 
+  />
+</div>
+
+<style>
+  .project-image {
+    width: 50%;
+    height: 50%;
+    align-items: center;
+  }
+</style>
